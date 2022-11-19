@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .text {
+    position: absolute;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}

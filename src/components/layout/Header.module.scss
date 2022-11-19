@@ -1,0 +1,21 @@
+.header {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnsContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .shoppingCart {
+    width: 28px;
+    height: 28px;
+  }
+
+  .burgerMenu {
+    width: 24px;
+    height: 24px;
+  }
+}
