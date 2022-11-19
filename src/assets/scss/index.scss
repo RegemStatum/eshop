@@ -1,0 +1,77 @@
+@use "./abstracts" as *;
+@use "./base" as *;
+// @use "./themes/" as *;
+// @use "./vendors/" as *;
+
+// Components and layout scss files will be paired as modules with React components
+// Pages scss files will be imported from the folder when the exact page will load
+// @use "./components" as *;
+// @use "./layout" as *;
+// @use "./pages" as *;
+
+// Global styles
+body {
+  background-color: getColor("nt-10");
+  font-family: "Open Sans", sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  // xs
+  p {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  a {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .container {
+    width: auto;
+    margin: 0 getMargin(800);
+
+    @include md {
+      margin: 0 getMargin(1200);
+    }
+
+    @include lg {
+      margin: 0 getMargin(1400);
+    }
+  }
+
+  .page {
+    margin-top: getMargin(1600);
+    margin-bottom: getMargin(800);
+  }
+
+  .page-min-height {
+    min-height: calc(100vh - 327px);
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .grid {
+    display: grid;
+    gap: getMargin(800);
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include lg {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  #modal {
+    position: absolute;
+    top: 0;
+  }
+}

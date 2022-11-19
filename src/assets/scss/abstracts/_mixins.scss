@@ -1,0 +1,127 @@
+@use "./functions" as *;
+@use "./breakpoints" as *;
+
+// getText
+@mixin text($value: 400) {
+  font-size: getFontSize($value);
+  line-height: getLineHeight($value);
+}
+
+// Styling
+@mixin pageMinHeight() {
+  // calc(100vh - headerHeight - footerHeight)
+  min-height: calc(100vh - 0 - 0);
+
+  @include md {
+    min-height: calc(100vh - 0 - 0);
+  }
+
+  @include lg {
+    min-height: calc(100vh - 0 - 0);
+  }
+}
+
+@mixin sectionPadding() {
+  padding: getPadding(1200) 0;
+
+  @include md {
+    padding: getPadding(1400) 0;
+  }
+}
+
+@mixin backgroundImage($path: "") {
+  background-image: url($path);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// box shadows
+@mixin boxShadow1 {
+  box-shadow: 0 1px 3px hsla(0, 0, 0, 0.12), 0 1px 2px hsla(0, 0, 0, 0.24);
+}
+
+@mixin boxShadow2 {
+  box-shadow: 0 3px 6px hsla(0, 0, 0, 0.15), 0 2px 4px hsla(0, 0, 0, 0.12);
+}
+
+@mixin boxShadow3 {
+  box-shadow: 0 10px 20px hsla(0, 0, 0, 0.15), 0 3px 6px hsla(0, 0, 0, 0.1);
+}
+
+@mixin boxShadow4 {
+  box-shadow: 0 15px 25px hsla(0, 0, 0, 0.15), 0 5px 10px hsla(0, 0, 0, 0.05);
+}
+
+@mixin boxShadow5 {
+  box-shadow: 0 20px 40px hsla(0, 0, 0, 0.2);
+}
+
+// border radius
+@mixin borderRadius1 {
+  border-radius: 5px;
+}
+
+// // Components
+// // form components
+// @mixin formContainer {
+//   padding: getPadding(600);
+//   background-color: getColor("nt-10");
+//   border-radius: 10px;
+//   @include boxShadow3;
+
+//   @include sm {
+//     padding: getPadding(1000);
+//   }
+
+//   @include md {
+//     width: 40vw;
+//     min-width: 400px;
+//   }
+// }
+
+// @mixin formLabel {
+//   margin-bottom: getMargin(200);
+//   display: block;
+//   font-family: "Roboto", sans-serif;
+//   @include text(600);
+//   font-weight: 500;
+//   color: getColor("nt-4");
+// }
+
+// @mixin formInput {
+//   width: 100%;
+//   padding: getPadding(600) getPadding();
+//   background-color: getColor("nt-9");
+//   border-radius: 5px;
+//   color: getColor("nt-4");
+
+//   &:-webkit-autofill,
+//   &:-webkit-autofill:hover,
+//   &:-webkit-autofill:focus {
+//     box-shadow: 0 0 0px 1000px getColor("nt-9") inset;
+//     -webkit-text-fill-color: getColor("nt-4");
+//     -webkit-box-shadow: 0 0 0px 1000px getColor("nt-9") inset;
+//   }
+
+//   &:focus {
+//     outline: none;
+//   }
+// }
+
+// @mixin formBtn {
+//   margin-top: getMargin(600);
+//   padding: getPadding(800);
+//   background-color: getColor("sp-tel-5");
+//   border-radius: 5px;
+//   font-family: "Roboto", sans-serif;
+//   @include text(600);
+//   font-weight: 500;
+//   color: getColor("sp-tel-10");
+//   cursor: pointer;
+//   transition: color 0.2s ease-out;
+
+//   &:hover {
+//     color: getColor("sp-tel-1");
+//   }
+// }
