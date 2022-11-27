@@ -1,14 +1,9 @@
 import React from "react";
-import { useRouteError } from "react-router-dom";
 
 const Error = () => {
-  const error = useRouteError();
-  console.log(error);
-
   return (
-    <div>
-      Error 404
-      <p>{error.statusText || error.message}</p>
+    <div className="page-min-height">
+      <b>Error 404</b>
     </div>
   );
 };

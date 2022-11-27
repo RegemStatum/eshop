@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import mockProducts from "../../data/products";
 import SingleProductSection from "./SingleProductSection";
 import styles from "./SingleProduct.module.scss";
-import { PrimaryButton, SecondaryButton } from "../ui/buttons";
+import { PrimaryButton } from "../ui/buttons";
 import { useAppContext } from "../../context/AppContext";
 
 const SingleProduct = ({ id }) => {
@@ -54,8 +54,14 @@ const SingleProduct = ({ id }) => {
   };
 
   const handleAddToCart = () => {
-    addProductToCart(id, productAmount, chosenColor, chosenSize);
-    setLabel({ status: true, msg: "Продукт успішно додано!" });
+    const msg = addProductToCart(
+      id,
+      productAmount,
+      chosenColor,
+      chosenSize,
+      price
+    );
+    setLabel({ status: true, msg: msg || "Продукт успішно додано!" });
   };
 
   if (!product || !product.photo || !product.name) {
@@ -84,7 +90,7 @@ const SingleProduct = ({ id }) => {
                 className={`${styles.colorCheckbox}  ${
                   chosenColor === color ? styles.checked : ""
                 }`}
-                style={{ "background-color": color }}
+                style={{ backgroundColor: color }}
               ></div>
             ))}
           </div>

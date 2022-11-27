@@ -1,0 +1,88 @@
+@use "../../assets/scss/abstracts/" as *;
+
+.container {
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+  .info {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .name {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  .colorContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+
+  .priceControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .amountControl {
+    width: max-content;
+    margin: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .minusBtn,
+    .plusBtn {
+      width: 34px;
+      padding: 0.5rem;
+      line-height: 1;
+      cursor: pointer;
+      background-color: #fef08a;
+    }
+
+    .amount {
+      padding: 0 1rem;
+    }
+  }
+
+  .productTotalPrice span {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+@include sm {
+  .container {
+    .priceControl {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+}

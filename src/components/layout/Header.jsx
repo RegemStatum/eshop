@@ -14,6 +14,10 @@ const Header = () => {
     isHeaderMenuOpen ? closeHeaderMenu() : openHeaderMenu();
   };
 
+  const handleCartBtnClick = () => {
+    closeHeaderMenu();
+  };
+
   return (
     <header className={styles.header}>
       <Logo />
@@ -27,7 +31,7 @@ const Header = () => {
         })}
       </div>
       <div className={styles.btnsContainer}>
-        <Link to="/cart">
+        <Link to="/cart" onClick={handleCartBtnClick}>
           <img src={shopCart} alt="shop-cart" className={styles.shoppingCart} />
         </Link>
         <img
