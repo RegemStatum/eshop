@@ -1,3 +1,4 @@
 import AppContext from "./AppContext";
+import ProductsContext from "./ProductsContext";
 
-export { AppContext };
+export { AppContext, ProductsContext };

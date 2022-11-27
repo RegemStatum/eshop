@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ProductsGrid from "../components/products/ProductGrid";
 import { useSearchParams } from "react-router-dom";
-import mockProducts from "../data/products";
+import SortProducts from "../components/sorting/SortProducts";
+import { useProductsContext } from "../context/ProductsContext";
 
 const Products = () => {
   const [searchParams] = useSearchParams();
-  const [products, setProducts] = useState(mockProducts);
+  const { productsToShow, initializeProducts } = useProductsContext();
 
   useEffect(() => {
     const category = searchParams.get("category");
-    if (!category) {
-      setProducts(mockProducts);
-      return;
-    }
-    const newProducts = mockProducts.filter(
-      (product) => product.type === category
-    );
-    setProducts(newProducts);
+    initializeProducts(category);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   return (
     <div className="page-min-height">
-      <ProductsGrid products={products} searchParams={searchParams} />
+      {/* sorting and filtering */}
+      <div>
+        <SortProducts />
+      </div>
+      {/* products */}
+      <ProductsGrid products={productsToShow} searchParams={searchParams} />
     </div>
   );
 };
