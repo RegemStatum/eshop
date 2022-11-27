@@ -1,14 +1,53 @@
+@use "../../assets/scss/abstracts/" as *;
+
 .container {
+  height: 100%;
   position: relative;
   border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
 
   .text {
     position: absolute;
+    font-size: 1.25rem;
+    font-weight: 400;
+    top: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
   }
 
   .image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+}
+
+@include sm {
+  .container {
+    .text {
+      width: 100%;
+    }
+  }
+}
+
+@include lg {
+  .container {
+    .text {
+      left: 15px;
+      top: 15px;
+    }
   }
 }

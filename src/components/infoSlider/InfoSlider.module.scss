@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  margin: 1rem 0;
+  cursor: grab;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .arrow1,
+  .arrow2 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+  }
+
+  .arrow1 {
+    left: 0px;
+  }
+
+  .arrow2 {
+    right: 0px;
+  }
+
+  .arrowhide {
+    display: none;
+  }
+}

@@ -8,8 +8,10 @@ const ProsGrid = () => {
   return (
     <div className={styles.grid}>
       <ProsTile image={pros1} text="Легко підібрати" />
+      <div className={styles.secondBox}>
+        <ProsTile image={pros3} text="Легко купити" />
+      </div>
       <ProsTile image={pros2} text="Легко знайти" />
-      <ProsTile image={pros3} text="Легко купити" />
     </div>
   );
 };

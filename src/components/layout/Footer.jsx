@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div>
         <Logo />
-        <p>Жіноче | Чоловіче</p>
       </div>
       <p>All rights reserved &copy; {new Date().getFullYear()}</p>
     </footer>

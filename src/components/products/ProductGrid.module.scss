@@ -1,0 +1,19 @@
+@use "../../assets/scss/abstracts/" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@include md {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include lg {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

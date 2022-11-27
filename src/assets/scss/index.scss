@@ -29,18 +29,23 @@ body {
 
   a {
     font-family: "Open Sans", sans-serif;
+
+    &:visited {
+      color: black;
+    }
   }
 
   .container {
     width: auto;
-    margin: 0 getMargin(800);
+    margin: 0 getMargin(600);
 
     @include md {
       margin: 0 getMargin(1200);
     }
 
-    @include lg {
-      margin: 0 getMargin(1400);
+    @include xl {
+      max-width: 1200px;
+      margin: 0 auto;
     }
   }
 
