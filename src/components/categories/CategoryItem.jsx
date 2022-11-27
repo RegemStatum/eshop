@@ -4,7 +4,7 @@ import styles from "./CategoryItem.module.scss";
 
 const CategoryItem = ({ name }) => {
   return (
-    <Link to="/products" className={styles.container}>
+    <Link to={`/products?category=${name}`} className={styles.container}>
       {name}
     </Link>
   );
