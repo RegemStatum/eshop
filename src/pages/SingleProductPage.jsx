@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import SingleProduct from "../components/products/SingleProduct";
 
-const SingleProduct = () => {
-  const location = useLocation();
-  const [productId, setProductId] = useState("");
+const SingleProductPage = () => {
+  const params = useParams();
 
-  // set product id on page load
-  useEffect(() => {
-    const pathArr = location.pathname.split("/");
-    const newProductId = pathArr[pathArr.length - 1];
-    setProductId(newProductId);
-  }, [location]);
-
-  return <div>SingleProduct with id {productId}</div>;
+  return (
+    <div className="page-min-height">
+      <SingleProduct id={params.id} />
+    </div>
+  );
 };
 
-export default SingleProduct;
+export default SingleProductPage;

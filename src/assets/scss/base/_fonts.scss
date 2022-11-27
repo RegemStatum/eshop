@@ -39,5 +39,11 @@
 @font-face {
   font-family: "Open Sans", sans-serif;
   src: local("Open Sans"),
+    url(../../fonts/OpenSans/OpenSans-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: local("Open Sans"),
     url(../../fonts/OpenSans/OpenSans-ExtraBold.ttf) format("truetype");
 }

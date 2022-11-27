@@ -15,19 +15,20 @@ const mockProducts = [
     sizes: ["s", "l", "xl"],
     type: "Кофтинки",
     photo: clothesImg1,
-
     featured: true,
+    price: 750,
   },
   {
     id: 2,
-    name: "Куртка оранжева",
+    name: "Куртка стильна",
     description:
       "Ця куртка оранжева. Lorem Ipsum є псевдо- латинський текст використовується у веб - дизайні, типографіка, верстка, і друку замість англійської підкреслити елементи дизайну над змістом.",
-    colors: ["red", "black", "white"],
+    colors: ["red", "black", "green"],
     sizes: ["s", "l", "xl"],
     type: "Куртки",
     photo: clothesImg2,
     featured: false,
+    price: 1400,
   },
   {
     id: 3,
@@ -39,6 +40,7 @@ const mockProducts = [
     photo: clothesImg3,
     type: "Светри",
     featured: true,
+    price: 450,
   },
   {
     id: 4,
@@ -50,6 +52,7 @@ const mockProducts = [
     photo: clothesImg4,
     type: "Светри",
     featured: false,
+    price: 500,
   },
   {
     id: 5,
@@ -61,6 +64,7 @@ const mockProducts = [
     photo: clothesImg5,
     type: "Футболки",
     featured: false,
+    price: 2000,
   },
   {
     id: 6,
@@ -72,6 +76,7 @@ const mockProducts = [
     photo: clothesImg6,
     type: "Светри",
     featured: true,
+    price: 300,
   },
 ];
 

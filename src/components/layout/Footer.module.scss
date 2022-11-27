@@ -1,12 +1,12 @@
 .footer {
   display: flex;
+  margin-bottom: 0.875rem;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
   color: black;
 
   & > div {
-    margin-bottom: 0.875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

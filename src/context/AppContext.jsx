@@ -4,6 +4,7 @@ const Context = React.createContext();
 
 const AppContext = ({ children }) => {
   const [isHeaderMenuOpen, setIsHeaderMenuOpen] = useState(false);
+  const [productsInCart, setProductsInCart] = useState([]);
 
   const openHeaderMenu = () => {
     setIsHeaderMenuOpen(true);
@@ -12,7 +13,17 @@ const AppContext = ({ children }) => {
     setIsHeaderMenuOpen(false);
   };
 
-  const contextValue = { isHeaderMenuOpen, openHeaderMenu, closeHeaderMenu };
+  const addProductToCart = (id, amount, color, size) => {
+    const newProductsInCart = [{ id, amount, color, size }, ...productsInCart];
+    setProductsInCart(newProductsInCart);
+  };
+
+  const contextValue = {
+    isHeaderMenuOpen,
+    openHeaderMenu,
+    closeHeaderMenu,
+    addProductToCart,
+  };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };

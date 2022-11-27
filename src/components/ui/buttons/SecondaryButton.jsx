@@ -1,0 +1,12 @@
+import React from "react";
+import styles from "./SecondaryButton.module.scss";
+
+const PrimaryButton = ({ children, onClick, className }) => {
+  return (
+    <button onClick={onClick} className={`${className} ${styles.btn}`}>
+      {children}
+    </button>
+  );
+};
+
+export default PrimaryButton;
