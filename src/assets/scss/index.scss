@@ -55,7 +55,13 @@ body {
   }
 
   .page-min-height {
-    min-height: calc(100vh - 327px);
+    min-height: calc(100vh - 164px);
+  }
+
+  @include md {
+    .page-min-height {
+      min-height: calc(100vh - 186px);
+    }
   }
 
   .row {

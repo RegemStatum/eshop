@@ -70,7 +70,7 @@ const mockProducts = [
     colors: ["red", "black", "white"],
     sizes: ["s", "l", "xl"],
     photo: clothesImg6,
-    type: "Светр",
+    type: "Светри",
     featured: true,
   },
 ];
