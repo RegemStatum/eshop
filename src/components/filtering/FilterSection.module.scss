@@ -1,0 +1,11 @@
+@use "../../assets/scss/abstracts/" as *;
+
+.filterBtn {
+  width: 100%;
+}
+
+@include sm {
+  .filterBtn {
+    width: 13rem;
+  }
+}

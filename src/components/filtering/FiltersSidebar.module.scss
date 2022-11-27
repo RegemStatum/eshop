@@ -1,0 +1,105 @@
+@use "../../assets/scss/abstracts/" as *;
+
+.container {
+  position: absolute;
+  top: -10px;
+  left: -2px;
+  width: 102%;
+  height: 100vh;
+  transition: width 0.2s ease-in-out;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+
+  .innerContainer {
+    padding: 20px;
+  }
+
+  &.hidden {
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .closeBtn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .categoriesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .category {
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    &.checked {
+      border-color: #3f6212;
+    }
+  }
+
+  .colorsContainer {
+    margin-left: 0.2rem;
+  }
+
+  .colorsContainer,
+  .sizesContainer {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .colorCheckbox,
+  .sizeCheckbox {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .colorCheckbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.checked {
+      box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .sizeCheckbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.checked {
+      border-color: black;
+    }
+  }
+
+  .priceContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@include md {
+  .container {
+    max-width: 30rem;
+
+    .closeBtn {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

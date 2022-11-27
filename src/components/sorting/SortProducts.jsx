@@ -1,5 +1,6 @@
 import React from "react";
 import { useProductsContext } from "../../context/ProductsContext";
+import styles from "./SortProducts.module.scss";
 
 const SortProducts = () => {
   const { sortOption, updateSortOption } = useProductsContext();
@@ -9,7 +10,11 @@ const SortProducts = () => {
   };
 
   return (
-    <select value={sortOption} onChange={changeOption}>
+    <select
+      value={sortOption}
+      onChange={changeOption}
+      className={styles.select}
+    >
       <option value="ASC">А - Я</option>
       <option value="DESC">Я - А</option>
       <option value="LOWHIGH">Від дешевих до дорогих</option>
