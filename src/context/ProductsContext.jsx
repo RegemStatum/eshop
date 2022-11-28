@@ -15,6 +15,7 @@ const ProductsContext = ({ children }) => {
     maxPrice: Infinity,
   });
 
+  // set filtering options
   useEffect(() => {
     let maxPrice = 0;
     let minPrice = Infinity;

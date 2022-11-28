@@ -41,6 +41,7 @@
     padding: 0.5rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    cursor: pointer;
 
     &.checked {
       border-color: #3f6212;
@@ -90,6 +91,10 @@
   .priceContainer {
     display: flex;
     align-items: center;
+
+    input {
+      cursor: grab;
+    }
   }
 }
 
