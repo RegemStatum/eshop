@@ -6,7 +6,6 @@ import ProsGrid from "../components/pros/ProsGrid";
 import InfoSlider from "../components/infoSlider/InfoSlider";
 import ProductGrid from "../components/products/ProductGrid";
 import mockProducts from "../data/products";
-import { useAppContext } from "../context/AppContext";
 
 const Home = () => {
   const featuredProducts = mockProducts.filter((product) => product.featured);
